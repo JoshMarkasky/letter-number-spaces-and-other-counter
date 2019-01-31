@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.*;
 
-public class practice {
+public class Arraypractice {
 
     public static void main(String[] args){
 
@@ -37,19 +37,21 @@ public class practice {
             System.out.println("total number of spaces: " + spaces);
             System.out.println("Total others signs used: " + others);
 
-            System.out.println("do you wish to use different words?? (y/n)");
-            answer = keyboard.nextLine();
-            char charanswer = answer.charAt(0);
-            if(charanswer == 'y' || charanswer == 'Y'){
-                keepGoing = true;
-            } else if(charanswer == 'n' || charanswer == 'N'){
-                System.out.println("Program has ended");
-                keepGoing = false;
-                System.exit(0);
-            } else {
-                System.out.println("invalid choice, program ended");
-                keepGoing = true;
-            }
+            do {
+                System.out.println("do you wish to use different words?? (y/n)");
+                answer = keyboard.nextLine();
+                char charanswer = answer.charAt(0);
+                if (charanswer == 'y' || charanswer == 'Y') {
+                    keepGoing = true;
+                } else if (charanswer == 'n' || charanswer == 'N') {
+                    System.out.println("Program has ended");
+                    keepGoing = false;
+                    System.exit(0);
+                } else {
+                    System.out.println("invalid choice, Please enter yes or no");
+                    keepGoing = true;
+                }
+            } while (keepGoing = true);
 
         } while (keepGoing = true);
 
