@@ -7,7 +7,7 @@ public class practice {
 
         Scanner keyboard = new Scanner(System.in);
         int numbers, letters, spaces, totalCount, others;
-        boolean keepGoing = true;
+        boolean keepGoing;
         String input, answer;
 
         do{
@@ -37,21 +37,19 @@ public class practice {
             System.out.println("total number of spaces: " + spaces);
             System.out.println("Total others signs used: " + others);
 
-            do {
-                System.out.println("do you wish to use different words?? (y/n)");
-                answer = keyboard.nextLine();
-                char charanswer = answer.charAt(0);
-                if (charanswer == 'y' || charanswer == 'Y') {
-                    keepGoing = true;
-                } else if (charanswer == 'n' || charanswer == 'N') {
-                    System.out.println("Program has ended");
-                    keepGoing = false;
-                    System.exit(0);
-                } else {
-                    System.out.println("invalid choice, Please enter yes or no");
-                    keepGoing = true;
-                }
-            } while (keepGoing = true);
+            System.out.println("do you wish to use different words?? (y/n)");
+            answer = keyboard.nextLine();
+            char charanswer = answer.charAt(0);
+            if (charanswer == 'y' || charanswer == 'Y') {
+                keepGoing = true;
+            } else if (charanswer == 'n' || charanswer == 'N') {
+                System.out.println("Program has ended");
+                keepGoing = false;
+                System.exit(0);
+            } else {
+                System.out.println("invalid choice, Please enter yes or no");
+                keepGoing = true;
+            }
 
         } while (keepGoing = true);
 
